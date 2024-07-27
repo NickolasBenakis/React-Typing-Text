@@ -34,10 +34,10 @@ const TypingText = ({
 
         return nextDisplayedText;
       });
-    }, typingSpeed);
+    }, speed);
 
     return () => clearInterval(interval);
-  }, [text, typingSpeed]);
+  }, [text, speed]);
 
   return <div className={cn("typing-text", className)} {...restProps}>{displayedText}</div>;
 };

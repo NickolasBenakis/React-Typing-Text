@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div>
       <h1>Typing Text</h1>
-      <TypingText text="Hello World!" typingSpeed={50} />
+      <TypingText text="Hello World!" speed={50} />
     </div>
   )
 }
