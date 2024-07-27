@@ -1,30 +1,52 @@
-# React + TypeScript + Vite
+## Typing Text
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+`Typing Text` is a simple React component that displays text with a typing animation. It's easy to use and highly customizable, allowing you to create engaging text animations in your React applications.
 
-Currently, two official plugins are available:
+Features
+* Typing animation for displaying text.
+* Customizable typing speed.
+* onAnimationEnd callback.
+* extendable by custom props.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Installation
 
-## Expanding the ESLint configuration
+Install the package
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```
+npm install typing-text
 
-- Configure the top-level `parserOptions` property like this:
+```
+# Usage
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
+```
+import React from 'react';
+import TypingText from 'typing-text';
+
+function App() {
+  return (
+    <div className="App">
+      <TypingText
+        text="Hello, World!"
+        speed={100}
+        loop={false}
+        onStart={() => console.log('Typing started')}
+        onComplete={() => console.log('Typing completed')}
+      />
+    </div>
+  );
 }
+
+export default App;
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Props
+
+| Prop |	Type  |	Default |	Description |
+| -----| -------|---------| ------------|
+|text |	string	|"" |	The text to display with typing animation.
+|speed |	number	|100	|Typing speed in milliseconds per character. (The less the faster)
+|onAnimationEnd	func	|null|	Callback function when typing ends.
+
+# Extend
+
+You can pass custom classnames, styles or any prop since we spread all the props in the component.

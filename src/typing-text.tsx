@@ -4,14 +4,14 @@ import { cn } from "./utils";
 
 export type TypingTextProps = {
   text: string;
-  typingSpeed?: number;
+  speed?: number;
   className?: string;
   onEndAnimation?: () => void;
 };
 
 const TypingText = ({
   text,
-  typingSpeed = 100,
+  speed = 100,
   className,
   onEndAnimation,
   ...restProps
