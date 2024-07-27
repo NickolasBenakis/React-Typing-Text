@@ -28,9 +28,7 @@ function App() {
       <TypingText
         text="Hello, World!"
         speed={100}
-        loop={false}
-        onStart={() => console.log('Typing started')}
-        onComplete={() => console.log('Typing completed')}
+        onAnimationEnd={() => console.log('Typing completed')}
       />
     </div>
   );
