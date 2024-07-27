@@ -50,3 +50,11 @@ export default App;
 # Extend
 
 You can pass custom classnames, styles or any prop since we spread all the props in the component.
+
+
+# Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request or open an issue on GitHub.
+
+# License
+This project is licensed under the MIT License.
