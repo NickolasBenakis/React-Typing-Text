@@ -3,20 +3,41 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+	"main": "dist/index.umd.js",
+	"module": "dist/index.es.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.es.js",
+			"require": "./dist/index.umd.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
-    "lint": "npx @biomejs/biome lint --write ./src",
-    "format": "npx @biomejs/biome check --write ./src",
-    "check": "npx @biomejs/biome check --fix ./src",
+		"prepare": "npm run build",
+		"lint": "npx @biomejs/biome lint --write ./src",
+		"format": "npx @biomejs/biome check --write ./src",
+		"check": "npx @biomejs/biome check --fix ./src",
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"react": "^18.3.1",
-		"react-dom": "^18.3.1"
+		"clsx": "2.1.1",
+		"react": "18.3.1",
+		"react-dom": "18.3.1",
+		"tailwind-merge": "2.4.0",
+		"vite-plugin-dts": "4.0.0-beta.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
+		"@types/node": "20.14.12",
 		"@types/react": "18.3.3",
 		"@types/react-dom": "18.3.0",
 		"@vitejs/plugin-react-swc": "3.5.0",
