@@ -44,8 +44,8 @@ export default App;
 | Prop |	Type  |	Default |	Description |
 | -----| -------|---------| ------------|
 |text |	string	|"" |	The text to display with typing animation.
-|speed |	number	|100	|Typing speed in milliseconds per character. (The less the faster)
-|onAnimationEnd	func	|null|	Callback function when typing ends.
+|speed |	number	|100	| Typing speed in milliseconds per character. (The less the faster)
+|onAnimationEnd |	function	| undefined |	Callback function when typing ends.
 
 # Extend
 
