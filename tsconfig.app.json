@@ -17,7 +17,8 @@
     "noEmit": true,
     "declaration": true,
     "typeRoots": ["./dist/index.d.ts"],
-    "jsx": "react-jsx",
+    "jsx": "preserve",
+    "allowJs": true,
 
     /* Linting */
     "strict": true,
